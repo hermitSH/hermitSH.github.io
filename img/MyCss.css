@@ -1,0 +1,88 @@
+html, body {
+    position: relative;
+    height: 100%; font-size: 14px;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+#page-content {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-container{
+    --swiper-theme-color: #fff;/* 设置Swiper风格 */
+    --swiper-navigation-color: #fff;/* 单独设置按钮颜色 */
+    --swiper-navigation-size: 30px;/* 设置按钮大小 */
+}
+p{ padding: 20px 30px}
+.banner .swiper-slide{background: no-repeat center center; background-size: cover}
+.glyphicon{ top: auto}
+.glyphicon-menu-down{
+    position: fixed; bottom: 0px; left:47%; height: 50px; z-index: 9999; font-size: 26px;
+    animation: rightan 1s linear 0s infinite alternate;
+    -webkit-animation: rightan 1s linear 0s infinite alternate;
+    -moz-animation: rightan 1s linear 0s infinite alternate;
+}
+@-webkit-keyframes rightan
+{
+
+    from
+    {
+        bottom: 0;
+    }
+    to
+    {
+        bottom: -10px;
+    }
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+    bottom: 0px;
+}
+
+img{ vertical-align: top}
+.mould-top-pic{ text-align: center; position: relative; height: calc(100% - 300px); background: no-repeat center 0px; background-size: cover}
+.mould-bottom-text{ text-align: center; padding-top: 20px}
+.mould-bottom-text img{ height: 220px}
+
+.mould-title2{ padding: 20px 0 20px 0; text-align: center}
+.mould-title2 img{ height: 60px}
+.mould-bottom-tag2{text-align: center;padding-top: 20px}
+.mould-bottom-tag2 img{ height: 150px}
+.mould-banner2{ position: relative;height: calc(100% - 280px); max-height: 300px}
+.mould-banner2{ padding-bottom: 30px}
+
+.mould-img3{
+    height: 100%; padding: 0px 20px 160px 20px; text-align: center;
+}
+.inner-full-img{height: 100%; max-width: 100%}
+
+.mould-img4{
+    height: 100%; margin: 0px 20px 0px 20px; text-align: center; overflow: hidden; background: no-repeat center 0px; background-size: cover
+}
+
+.swiper-button-next, .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    width: 27px;
+    height: 44px;
+    margin-top: -44px;
+    z-index: 10;
+    cursor: pointer;
+    background-size: 27px 22px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.arrow-down {
+    position: fixed;
+    bottom: 0px;
+    left: 47%;
+    height: 50px;
+    z-index: 9999;
+    font-size: 26px;
+    animation: rightan 1s linear 0s infinite alternate;
+    -webkit-animation: rightan 1s linear 0s infinite alternate;
+    -moz-animation: rightan 1s linear 0s infinite alternate;
+}
