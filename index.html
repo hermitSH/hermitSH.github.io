@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="MyCss.css" rel="stylesheet">
     <style>
-
+        .full_img{width: 100%; height: 100%; background-size: cover; background-position: center center}
         .page-middle-banner{position: relative; height: calc(100% - 400px); max-height: 280px; padding-bottom: 30px}
 
         .page-3-img{
@@ -53,7 +53,9 @@
     <div>
         <!-- 第1页 -->
         <div class="swiper-slide page">
-            <div style="width: 100%; height: 100%; background-image: url('img/page1/p1_img.png'); background-size: cover; background-position: center center"></div>
+            <div class="full_img swiper-lazy" style="background-image: url('img/page1/p1_img.png');">
+                <div class="swiper-lazy-preloader"></div>
+            </div>
         </div>
 
         <!-- 第2页 -->
