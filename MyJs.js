@@ -53,10 +53,13 @@ var mySwiper = new Swiper('#page-content',{
                 var page = $("#page-content .swiper-wrapper .swiper-slide[data-swiper-slide-index=" + (this.activeIndex + 1) + "]");
                 checkAndPauseVideo(page);
             }
+
+            playCurrentVideo(this.activeIndex)
         },
         init: function(){
-            count= this.virtual.slides.length
+            count= this.virtual.slides.length;
             initDOM()
+            playCurrentVideo(0)
         }
     },
 
@@ -70,6 +73,17 @@ function initDOM() {
         $(".video-module").each(function () {
             initVideo(this);
         })
+    }
+}
+
+function playCurrentVideo(index) {
+    var video = $("#page-content .swiper-wrapper .swiper-slide[data-swiper-slide-index=" + index + "]").find(".video-module");
+    if(video.length > 0) {
+        if($(video[0]).data("sub-inited")) {
+            var playerId = "J_prismPlayer" + index;
+            var player = playerMap[playerId];
+            player.play();
+        }
     }
 }
 
@@ -188,24 +202,6 @@ function setVideo(id,url) {
                             "align": "tl",
                             "x": 10,
                             "y": 7
-                        },
-                        {
-                            "name": "fullScreenButton",
-                            "align": "tr",
-                            "x": 10,
-                            "y": 12
-                        },
-                        {
-                            "name": "subtitle",
-                            "align": "tr",
-                            "x": 15,
-                            "y": 12
-                        },
-                        {
-                            "name": "setting",
-                            "align": "tr",
-                            "x": 15,
-                            "y": 12
                         },
                         {
                             "name": "volume",
