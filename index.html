@@ -566,5 +566,46 @@
 <link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.8.2/skins/default/aliplayer-min.css"/>
 <script type="text/javascript" charset="utf-8"  src="https://g.alicdn.com/de/prismplayer/2.8.2/aliplayer-min.js"></script>
 <script type="text/javascript" src="MyJs.js"></script>
+<script type="text/javascript">
+    var $htmls=$($("#htmls").html()).clone()
+    var  imgs=[];
+    $htmls.find('.swiper-lazy').each(function () {
+        var src=$(this).css('background-image')
+        if(src){
+            imgs.push(src.split("\"")[1])
+        }
+    })
+
+    $htmls.find('img').each(function () {
+        var src=$(this).attr("src")
+        if(src){
+            imgs.push(src)
+        }
+    })
+    console.log(imgs)
+
+    window.onload=function () {
+        imgLoad()
+    }
+    function imgLoad() {
+        var count=imgs.length;
+        for(var i in imgs){
+            var img=new Image();
+            img.src=imgs[i];
+            img.onload=function () {
+                --count;
+                if(count==0){
+                    console.log('图片加载完成')
+                }
+            }
+            img.error=function () {
+                --count;
+                if(count==0){
+                    console.log('图片加载完成')
+                }
+            }
+        }
+    }
+</script>
 </body>
 </html>

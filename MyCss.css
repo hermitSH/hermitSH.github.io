@@ -9,18 +9,19 @@ html, body {
     --swiper-navigation-color: #fff;/* 单独设置按钮颜色 */
     --swiper-navigation-size: 30px;/* 设置按钮大小 */
 }
+.swiper-pagination-bullet-active {opacity: 1;background: #B6CAE3;}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{bottom: 0;}
+
 p{ padding: 20px 30px}
 .banner .swiper-slide{background: no-repeat center center; background-size: cover}
 .glyphicon{ top: auto}
 .glyphicon-menu-down{
-    position: fixed; bottom: 0px; left:47%; height: 50px; z-index: 9999; font-size: 26px;
+    position: fixed; bottom: 0; left:47%; height: 50px; z-index: 9999; font-size: 26px;
     animation: rightan 1s linear 0s infinite alternate;
     -webkit-animation: rightan 1s linear 0s infinite alternate;
     -moz-animation: rightan 1s linear 0s infinite alternate;
 }
-@-webkit-keyframes rightan
-{ from {bottom: 0;} to {bottom: -10px;} }
-.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{bottom: 0px;}
+@-webkit-keyframes rightan { from {bottom: 0;} to {bottom: -10px;} }
 
 img{ vertical-align: top}
 .mould-top-pic{ text-align: center; position: relative; height: calc(100% - 354px); background: no-repeat center 0px; background-size: cover}
