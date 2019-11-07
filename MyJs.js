@@ -23,9 +23,9 @@ var mySwiper = new Swiper('#page-content',{
         slideChangeTransitionEnd: function(){
             console.log(count,this.activeIndex)
             if(count==this.activeIndex+1){
-                $(".glyphicon-menu-down").hide()
+                $(".arrow-down").hide()
             }else {
-                $(".glyphicon-menu-down").show()
+                $(".arrow-down").show()
             }
 
             var banner = $("#page-content .swiper-wrapper .swiper-slide[data-swiper-slide-index=" + this.activeIndex + "]").find(".banner")
