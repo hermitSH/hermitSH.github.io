@@ -2,8 +2,10 @@ var count=$('.swiper-slide.page').length;
 var inited = false;
 var playerMap = {};
 var needRestore = false;
+var isMediaInit = false;
 
 var media = document.getElementById("media");
+
 $(function () {
     media.play();
     $("#audio_btn").addClass("rotate");
@@ -74,6 +76,12 @@ var mySwiper = new Swiper('#page-content',{
             }
 
             playCurrentVideo(this.activeIndex)
+        },
+        touchStart: function(event){
+            if (!isMediaInit) {
+                isMediaInit = true;
+                media.play()
+            }
         },
         init: function(){
             count= this.virtual.slides.length;
