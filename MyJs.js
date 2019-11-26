@@ -5,7 +5,7 @@ var needRestore = false;
 
 var media = document.getElementById("media");
 $(function () {
-        // media.play();
+    media.play();
     $("#audio_btn").click(function () {
         $(this).toggleClass("rotate"); //控制音乐图标 自转或暂停
         needRestore = false;
